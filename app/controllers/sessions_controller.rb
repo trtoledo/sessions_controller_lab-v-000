@@ -12,10 +12,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    if session[:name].present?
-      session.destroy
-    end
-    redirect_to root_path
+    session.delete :name
   end
 
 end
